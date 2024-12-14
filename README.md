@@ -1,6 +1,6 @@
-Projek Game OOP Java
-Kelompok 11 Kelas D
-Kelompok COI
+# Projek Game OOP Java
+## Kelompok 11 Kelas D
+### Kelompok COI
 - 2317051005	CARISSA OKTAVIA SANJAYA
 - 2317051107	ORYZA SURYA HAPSARI
 - 2357051009	MUHAMMAD ILHAM AKBAR
