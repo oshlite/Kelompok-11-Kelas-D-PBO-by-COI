@@ -1,0 +1,32 @@
+package utils;
+
+import javax.sound.sampled.*;
+import java.io.File;
+import java.io.IOException;
+
+public class MusicPlayer {
+    private Clip clip;
+
+    public void play(String filePath) {
+        try {
+            File musicFile = new File(filePath);
+            if (musicFile.exists()) {
+                AudioInputStream audioStream = AudioSystem.getAudioInputStream(musicFile);
+                clip = AudioSystem.getClip();
+                clip.open(audioStream);
+                clip.start();
+                clip.loop(Clip.LOOP_CONTINUOUSLY); // Ulangi musik secara terus-menerus
+            } else {
+                System.out.println(filePath);
+            }
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void stop() {
+        if (clip != null && clip.isRunning()) {
+            clip.stop();
+        }
+    }
+}
